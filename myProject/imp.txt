@@ -1,0 +1,15 @@
+First create a project - django-admin startproject myProject
+cd myProject
+django version - django-admin --version
+Creating the applicaitons: python3 manage.py startapp blog | python manage.py startapp blog
+python3 manage.py startapp shop | python3 manage.py startapp shop
+register the app in settings
+
+
+Crating the views in blog and shop 
+Create blog/urls.py and shop/urls.py
+
+myproject/urls.py entry
+
+- end -
+

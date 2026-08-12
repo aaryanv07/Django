@@ -1,0 +1,40 @@
+# What is Django? - A high-level Python web framework that encourages rapid development and clean, pragmatic design.
+# Django is a framework of python
+# Why use Django?
+# - ORM - Object Relational Mapper (Interacting with database using python code)
+# - Admin Panel - Auto-generated admin interface for managing data
+# - Security - Built-in protection against common web vulnerabilities
+# - Scalability - Handles large amounts of traffic and data
+# - Community - Large and active community with extensive documentation
+
+
+
+# For using Django you must have python version above 3.7 or higher
+# Install Django use command - pip install Django or pip3 install Django
+# Check for installation - django-admin --version
+# Install virtual environment - pip install virtualenv
+# Create virtual environment - virtualenv myenv | python create -m venv venv 
+
+# Activate virtual environment - source myenv/bin/activate (mac) / myenv\Scripts\activate (windows)
+# If error occours while scripting - (Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned)
+# pip install django
+
+
+# Create Django Project
+# Starting the project
+# django-admin startproject myProject
+# myProject is the project's name
+# After running this command following folders and files are created:
+# myProject/ (outer folder)
+# ├── manage.py         # It is a command-line utility that lets you do administrative tasks.
+# └── myProject/ (inner folder)
+#     ├── __init__.py   # It is a file that tells Python that this directory is a Python package.
+#     ├── settings.py   # It is a file that contains the settings of the project.
+#     ├── urls.py       # It is a file that contains the URL patterns of the project.
+#     ├── asgi.py       # It is a file that is used to run the project in ASGI mode.
+#     └── wsgi.py       # It is a file that is used to run the project in WSGI mode.
+
+# Run the project 
+# cd myProject --> python manage.py runserver 8080
+# Starting the app
+# python3 manage.py startapp play

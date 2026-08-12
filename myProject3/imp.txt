@@ -1,0 +1,25 @@
+Templates Folder Setup(Project):
+--> We are done with the view of MVT now we are starting with T --> Templates 
+--> Templates are used to display the data to the user in a human-readable format 
+
+django-admin startproject projectname
+cd projectname
+
+create templates folder at root
+first file home.html
+
+into the project settings under templates:
+pass this path
+"DIRS": [os.path.join(BASE_DIR,'templates')], 
+
+create views.py into the project folder(same directory where settings.py is located)
+url mapping in urls.py
+
+run the server
+
+Templates Use Types
+ Project Level Templates
+ App level Templates
+
+Project Template Setup
+

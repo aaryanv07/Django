@@ -1,0 +1,73 @@
+Template Folder Setup(App Level)
+Create Project and app
+App Level Template
+SetUp HTML File
+
+create app blog and shop
+python manage.py startapp blog
+python manage.py startapp shop
+
+register apps in the settings
+into the project settings under templates:
+pass this path
+
+"DIRS": [BASE_DIR/'templates'],
+configure blog app's views.py
+
+create templates folder in app:
+
+myProject4
+├── blog
+│   ├── templates
+│   │   └── blog
+│   │       └── post_list.html
+│   ├── views.py
+│   ├── models.py
+│   ├── apps.py
+│   └── urls.py
+├── myProject4
+├── manage.py
+
+configure shop app's views.py
+create templates folder in shop:
+
+myProject4
+├── blog
+│   ├── templates
+│   │   └── blog
+│   │       └── post_list.html
+│   ├── views.py
+│   ├── models.py
+│   ├── apps.py
+│   └── urls.py
+├── shop
+│   ├── templates
+│   │   └── shop
+│   │       └── product_list.html
+│   ├── views.py
+│   ├── models.py
+│   ├── apps.py
+│   └── urls.py
+├── myProject4
+├── manage.py
+
+
+configure urls in the main project
+create urls.py in both the apps and configure them
+
+run the server
+http://127.0.0.1:8000/shop/
+http://127.0.0.1:8000/blog/
+
+
+Project Templates Connect with Apps
+Create Project & App
+Confifuration SetUp
+--> Configure templates/base.htm --> shop/product_list.html
+& blog/post_list.html
+
+--> run the server
+
+Connect main project to Apps
+Setup HTML for both
+Final Setup and Testing

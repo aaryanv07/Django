@@ -1,0 +1,26 @@
+Templates #1 Basics and variables
+template setup (project + app structure). 
+Rendering templates using views.py. 
+{{Variable}} basics
+dictionary, list, object attributes access
+nested variables {{user.profile.name}}
+default values:  default, default_if_none
+save vs autoescape (safe,escape)
+
+Template setup (project + app structure)
+Rendering templates using views.py
+{{variable}} basics
+
+Steps:
+create new app 'blog'
+register the app in settings
+"DIRS": [BASE_DIR / "templates"],
+
+configure views.py inside the app
+create templates/blog/home.html in blog app
+create urls.py
+
+Accessing the list,Dictionary, Object attribute access
+
+_end_
+

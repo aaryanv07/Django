@@ -1,0 +1,28 @@
+# Setting up the virtual environment
+# python3 -m venv venv
+# source vern/bin/activate / venv\Scripts\activate
+
+# Installing Django
+# pip install django
+# django-admin --version
+
+# Creating the django Project
+# django-admin startproject d2
+# cd d2
+
+# Creating the django App
+# python3 manage.py startapp blog (mac) | python manage.py startapp blog (windows)
+
+# Running the django app
+# python manage.py runserver
+# Registering the app is settings.py
+
+# App structure
+# migration - It is used to create and manage database tables
+# __init__ - It is a file that tells Python that this directory is a Python package.
+# admin.py - It is used to register the models in the admin panel.
+# views.py - It is used to define the views of the application. (function and class)
+# urls.py - It is used to define the URLs of the application.
+# models.py - It is used to define the models of the application.
+# tests.py - It is used to define the tests of the application.
+# apps.py - It is used to define the configuration of the application.

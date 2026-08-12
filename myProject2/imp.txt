@@ -1,0 +1,12 @@
+URL Parameters (path,re_path,kwargs)
+Create Project and App - 'django-admin startproject projectname' 
+and 'python3 manage.py startapp appname'
+
+install app in settings.py
+url configuration in urls.py
+Project Main urls
+Testing (python manage.py runserver) --> 
+http://127.0.0.1:8000/blog/post/2/
+http://127.0.0.1:8000/blog/user/ria/
+
+re_path --> Matching complex patterns --> http://127.0.0.1:8000/blog/article/2025/

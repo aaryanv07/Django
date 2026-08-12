@@ -1,0 +1,19 @@
+Templates - Filters: (text, numbers, date)
+text filters --> Upper, lower, title, capfirst, truncatechars, truncatewords, linebreaks
+numbers filters --> First, last, length, slice, join.
+yes/no and plural -> yesno, pluralise
+date/time filters --> date, time, timesince, timeuntil
+encoding and formatting --> urlencode,flatformat
+
+create the app blog - python3 manage.py startapp blog
+url mapping in urls.py
+create urls.py in blog
+register the app in settings 
+
+"DIRS": [BASE_DIR/'templates'] setup in settings
+
+create folder blog/templates/blog/blog_details.html
+setup view.py of blog app
+setup blog_details.html
+run the server
+python3 manage.py runserver

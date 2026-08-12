@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#1 Template Basic</title>
+</head>
+<body>
+    <h1>Template Basic</h1>
+    <!-- this is a comment--> <!-- Risky comment renders in 
+     the if source code view it is not secure -->
+     {% comment %} This is a secure comment and will 
+     not render in the view source code 
+     Multiline
+     {% endcomment %}
+
+     {#Single line#}
+     <p>This is a single template To demonstrate basic HTML structure.</p>
+     <p>Feel free to explore the different sections.</p>
+     <p>Enjoy your time here!</p>
+     {%comment%} Single Variable {%endcomment%}
+
+     <p>name: {{name}}</p>
+     <p>age: {{age}}</p>
+     <p>is_student: {{is_student}}</p>
+
+   {%comment%}  List Access {%endcomment%} 
+<p>First skill: {{skills.0}}</p>
+<p>Skills: {{skills}}</p>
+{%comment%} obj attribute {%endcomment%} 
+<p>User name: {{user.name}}</p>
+<p>User age: {{user.age}}</p>
+   <h1>Blog Information</h1>
+   <p>Title: {{blog.title}}</p>
+   <p>Content: {{blog.content}}</p>
+   <p>Content: {{blog.content|safe}}</p>  {#This is browser safe #}
+   <p>Created At: {{blog.created_at}}</p>
+   <!-- Nested Dictionary access -->
+    <p>Name: {{blog.author.name}}</p>
+    <p>Age: {{blog.author.age}}</p>
+
+   {% comment %} Default Empty Value: {% endcomment %}
+   <p>Default Empty Value: {{empty_value|default:"No value is assigned"}}</p>
+   <p>Default Empty Value: {{empty_value|default_if_none:"No value is assigned"}}</p>
+
+</body>
+</html>
