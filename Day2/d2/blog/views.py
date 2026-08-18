@@ -7,4 +7,4 @@ def home(request):
     return HttpResponse("<h1>Hello World</h1>")
 def about(request):
     a=21
-    return HttpResponse(f"You are forevever {a}")
+    return HttpResponse(f"You are forever {a}")
