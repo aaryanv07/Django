@@ -8,6 +8,7 @@ class User:
 def home(request):
     context={'name':"Mohit Kumar",
     'age':25,
+    'is_student':'True',
     'skills':['Python','Django','SQL'],
     'user':User('Kumar',30),
     'blog':{'title':'My First Blog Post',

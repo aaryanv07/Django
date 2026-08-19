@@ -1,0 +1,20 @@
+Templates #3
+
+Tags (Control Flow)
+
+* {% if %}...{% else %}
+* {% for %}...{% empty %}
+* {% with %}
+* {% cycle %} (useful in table rows, alternate colors)
+* {% firstof %} (first available variable)
+* {% now "DATE_FORMAT" %}
+* {% verbatim %} (ignore template parsing)
+* {% autoescape on/off %}
+
+-- Steps --
+1.Register app in settings
+2.Create urls.py in app
+
+configure views.py
+configre blog_list.html
+Test by running the server

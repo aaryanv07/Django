@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%load static %}
+{%block title%} Home Page{%endblock%}
+
+{%block content%}
+<h1>Home</h1>
+<img src="{%static 'images/logo.png' %}" alt="Home img">
+<form method='POST'>{%csrf_token%}
+<!-- csrf_token -> cross site request forgery token: 
+ Helps to secure the forms, prevent from any 
+ attacker to inject malicious code 
+  -->
+ <input type="text" name="username" placeholder="Username">
+ <input type="password" name="password" placeholder="Password">
+</form> 
+<button type='submit' onclick="showAlert()">Submit</button>
+{%endblock%}

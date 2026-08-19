@@ -1,0 +1,53 @@
+ORM in DJANGO (object relationship mapper)
+What is ORM
+
+ORM working flow
+
+Real life example
+
+Benefits of ORM 
+
+python code --> ORM --> SQL Statements --> Databses 
+--> ORM --> python code 
+
+Connects with any database Mysql, PostgreSql, Sqlite, Oracle, etc. 
+
+Benefits of ORM
+
+* Less SQL – aapko raw queries likhne ki zaroorat nahi.
+* Database Independent – MySQL, PostgreSQL, SQLite sab ke saath kaam karega.
+* Secure – SQL Injection ke chances bahut kam ho jate hain.
+* Readable – Easy to maintain.
+
+Django Models & Migrations
+
+* Introduction to Models
+* Create a Model.
+* Migrations and Migration Files
+* Understand SQLite DB.
+
+
+Steps -->
+create app blog --> python3 manage.py startapp blog 
+configure urls.py project and app level,view.py, settings file
+
+create templates in blog folder and blog.html file
+
+set up models.py
+
+Retrieving Data from Database
+
+* Django ORM QuerySet
+* all() → Fetches all records
+* get() → Fetches single record
+    (error if multiple/none)
+* filter() → Fetches records with condition
+* Use Django Shell for Output.
+
+Retrieving Data from Database
+
+* Ordering & Chaining
+* exclude() → opposite of filter (skip condition)
+* values() → returns data as dictionaries
+* first() / last() → get first or last record
+* count() → total number of records

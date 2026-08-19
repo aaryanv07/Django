@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#3 Template</title>
+</head>
+<body>
+    <h1>Blog List</h1>
+    <p>{{ today }}</p>
+    {% if blogs.0.is_featured %}
+        <h2>Featured Blog: {{blogs.1.title}}</h2>
+    {% else %}
+        <h2>Not Featured Blog: {{blogs.1.title}}</h2>
+   
+    {% endif%}
+    {% comment %}
+        For loop
+    {% endcomment %}
+    <ul>
+    {% for blog in blogs %}
+    <li>{{forloop.counter}}.{{blog.title}}-{{blog.author}}</li>
+    {% empty %}
+    <li>No blogs found</li>
+    {% endfor %}
+    </ul>
+    {% comment %}
+        with tag
+    {% endcomment %}
+    {% with total_blog=blogs|length %}
+    <p>Total blogs: {{total_blog}}</p>
+    {% endwith %}
+    {% comment %}
+        Cycle
+    {% endcomment %}
+    <hr>
+    <h2>Blogs in Table</h2>
+    <table border="1" cellpadding="5" cellspacing="5">
+        {% for blog in blogs %}
+        <tr style='background-color:{%cycle 'lightblue' 'lightgreen' %}'>
+        <td>{{blog.author}}</td>
+        <td>{{blog.title}}</td>
+        <td>{{blog.is_featured}}</td>
+        
+        </tr>
+        {% endfor %}
+        <tr>{{forloop.counter}}</tr>
+    </table> 
+    {% comment %}
+        FirstOf
+    {% endcomment %}
+    {% firstof blogs1.1.author "ABC" %} <!-- For giving fallback value-->
+    <!-- Sets the fallback value -->
+     {% comment %}
+        Verbatim {{Converts into string like avoids the parsing }}
+     {% endcomment %}
+     {% verbatim %}
+     {{html_code}}
+     {% endverbatim %}
+     {% comment %}
+        Autoescape
+     {% endcomment %}
+
+     <p>default(Safe Escaped(Safe Escaped)):{{html_code}}</p>
+     <p>autoescape off:{{html_code|safe}}</p>
+     {% autoescape off %}
+        {{html_code}}
+     {% endautoescape %}
+     <!-- By default it is kept off by the django for avoiding data injection -->
+</body>
+</html>

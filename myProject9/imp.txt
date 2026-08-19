@@ -1,0 +1,20 @@
+create portfolio app
+python3 manage.py startapp portfolio
+do the configurations in settings.py, urls.py app and project level 
+create uls.py in app
+setup models.py
+setup views.py
+
+create folder in app portfolio/student_list.html
+
+
+Do the migrations:
+python3 manage.py makemigrations portfolio
+python3 manage.py migrate
+
+open shell
+python3 manage.py shell
+from portfolio.models import Student
+Student.objects.create(name="Rohit",age=20,city="Delhi")
+
+set views.py

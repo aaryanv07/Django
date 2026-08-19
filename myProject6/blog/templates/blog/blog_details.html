@@ -1,14 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#2 Template</title>
-</head>
-<body>
-<h1>Blog Filter Page</h1>
-{% comment %}
-    Text Filter
-{% endcomment %}
-</body>
+  </head>
+  <body>
+    <h1>Blog Filter Page</h1>
+    {% comment %}
+      Text Filter
+    {% endcomment %}
+    <!-- For making developer aware about the working -->
+    <p>
+      <b>Title (Normal):</b>
+      {{post.title}}
+    </p>
+    <p>
+      <b>Title (Upper):</b>
+      {{post.title|upper}}
+    </p>
+    <p>
+      <b>Title (Lower):</b>
+      {{post.title|lower}}
+    </p>
+    <p>
+      <b>Title (Capitalize):</b>
+      {{post.title|capfirst}}
+    </p>
+    <p>
+      <b>Title (Title):</b>
+      {{post.title|title}}
+    </p>
+    <p>
+      <b>TruncateChars:</b>
+      {{post.description|truncatechars:10}}
+    </p>
+    <p>
+      <b>TruncateWords:</b>
+      {{post.description|truncatewords:3}}
+    </p>
+    <p>
+      <b>LineBreaker:</b>
+      {{post.description|linebreaksbr}}
+    </p>
+    <br />
+    <p>
+      <b>Original Price:</b>
+      {{post.price}}
+    </p>
+    <p>
+      <b>Price (+5):</b>
+      {{post.price|add:5}}
+    </p>
+    <p>
+      <b>Price (3 Decimal):</b>
+      {{post.price|floatformat:3}}
+    </p>
+    {% comment %}
+      Division By
+    {% endcomment %}
+
+    {%if post.number|divisibleby:2 %}
+      <p>Number is divisible by 2</p>
+    {% else %}
+      <p>Number is not divisible by 2</p>
+    {% endif %}
+    {% comment %}
+        List Filter
+    {% endcomment %}
+<p><b>First Tag:</b> {{post.tags|first}}</p>
+<p><b>Last Tag:</b> {{post.tags|last}}</p>
+<p><b>Slice (First 2):</b> {{post.tags|slice:":2"}}</p>
+<p><b>Join Tag:</b>{{post.tags|join:" , "}}</p>
+<br>
+<p>Author Availble?:{{post.author|yesno:'Yes,No,Maybe'}}</p>
+<p>Comments Counts : {{post.comments_count}} Comment{{post.comments_count|pluralize}}</p>
+<br>
+<p><b>Fomatted Date:</b>{{post.created_at|date:"D d M Y"}}</p>
+<p><b>Time Only:</b>{{post.created_at|time:"h:i A"}}</p>
+
+<!-- Encoding and formatting -->
+ <p><b>Title Encode:</b>{{post.title|urlencode}}</p>
+ <p><b>Floor format Example:</b>{{123.3453|floatformat:"2"}}</p>
+
+<br>
+  </body>
 </html>

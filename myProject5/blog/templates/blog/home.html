@@ -13,6 +13,7 @@
      not render in the view source code 
      Multiline
      {% endcomment %}
+     {# Single line comment #}
 
      {#Single line#}
      <p>This is a single template To demonstrate basic HTML structure.</p>
@@ -33,7 +34,7 @@
    <h1>Blog Information</h1>
    <p>Title: {{blog.title}}</p>
    <p>Content: {{blog.content}}</p>
-   <p>Content: {{blog.content|safe}}</p>  {#This is browser safe #}
+   <p>Content_safe: {{blog.content|safe}}</p>  {#This is browser safe #}
    <p>Created At: {{blog.created_at}}</p>
    <!-- Nested Dictionary access -->
     <p>Name: {{blog.author.name}}</p>

@@ -13,7 +13,7 @@
 # Install Django use command - pip install Django or pip3 install Django
 # Check for installation - django-admin --version
 # Install virtual environment - pip install virtualenv
-# Create virtual environment - virtualenv myenv | python create -m venv venv 
+# Create virtual environment - virtualenv myenv | python -m venv venv 
 
 # Activate virtual environment - source myenv/bin/activate (mac) / myenv\Scripts\activate (windows)
 # If error occours while scripting - (Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned)

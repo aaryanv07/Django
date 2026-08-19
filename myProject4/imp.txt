@@ -3,6 +3,8 @@ Create Project and app
 App Level Template
 SetUp HTML File
 
+-------------------------
+Steps:
 create app blog and shop
 python manage.py startapp blog
 python manage.py startapp shop
@@ -11,7 +13,7 @@ register apps in the settings
 into the project settings under templates:
 pass this path
 
-"DIRS": [BASE_DIR/'templates'],
+"DIRS": [BASE_DIR/'templates'], 
 configure blog app's views.py
 
 create templates folder in app:

@@ -1,0 +1,38 @@
+Templates #4
+Inheritance & Static
+
+* How to create a base template
+* How inheritance works
+* How to include a navbar
+* How static files are set up
+* How to use forms and CSRF token
+* How to use the URL tag
+
+Steps
+Create templates folder in the root
+
+1.Create a base template (in templates folder)
+2.Create a navbar template (in templates folder)
+3.Create a home template (in templates folder)
+
+Create Static folder (in the root)
+
+Register app in settings
+
+Register static folder in settings
+STATICFILES_DIRS =[BASE_DIR/'static']
+
+Create urls.py in app
+create templates in app and other configuration
+
+configuration project urls.py file
+
+configure app urls.py
+configure app views.py
+
+configure templates/base.html,navbar.html,home.html
+configure blog/about.html file
+
+
+
+
