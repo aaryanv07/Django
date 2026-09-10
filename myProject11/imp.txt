@@ -1,0 +1,18 @@
+**HTML Forms in Django**
+
+- Use a form with POST for changes.
+- Add a CSRF token (Cross-Site Request Forgery token) for security.
+- Input fields and save data in DB.
+- Check the request method and read the data.
+- Validate and clean the data before saving.
+- Redirect after a successful submit to avoid duplicates.
+
+setup models.py
+setup views.py
+
+check your db.sqlite file
+
+run the server inspect the page
+
+use both the get and post method to display and collect data
+

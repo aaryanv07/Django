@@ -15,7 +15,7 @@ def home(request):
     'author':{'name':'Kumar','age':30},
     'content':'<b>This is the content of my first blog post</b>',
     'created_at':datetime(2026,8,18,10,30)},
-    'empty_value':None,}    
+    'empty_value':False,}    
 
     return render(request,'blog/home.html',context)
     

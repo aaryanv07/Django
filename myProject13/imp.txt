@@ -1,0 +1,20 @@
+Django Pagination 
+
+Paginator class
+Display Pagination links in template
+
+set-up in models.py,admin.py
+set-up views.py
+
+
+
+create urls.py in blog app
+
+setup - post_list.html 
+
+run the server
+
+-- Search and Filter
+
+- Search using Q objects (for handling complex queries)
+- Filter querysets dynamically

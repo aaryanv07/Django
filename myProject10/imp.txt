@@ -1,0 +1,53 @@
+Create Admin and Superuser
+
+* What is Django admin
+* Preparing project with migrations
+* Creating a superuser account
+* Accessing Django admin dashboard
+* Managing data through admin
+
+/admin --> username and password is superuser --> opens a dashboard for easy data insertion/updation/ deletion of data.
+without using queries
+
+installed apps --> "django.contrib.admin" --> python manage.py migrate (predefined databases)
+
+Create app --> Portfolio and Students
+Steps -- python manage.py makemigrations (to make changes in model)
+       python manage.py migrate (to apply changes in database)
+
+runcommand --> python3 manage.py createsuperuser --> admin (user) --> admin@gmail.com --> admin (password)
+
+in db.sqlite3 --> check select * from auth_user
+
+run the server and log in admin --> select users and the admin and change the first and last name and save
+check you db.sqlite file  
+
+on your server --> users --> add user --> username (mohit / or any) --> password (Example@123)
+
+**Register Models in Admin Panel**
+
+- Defining fields inside `models.py`
+- Applying migrations for models
+- Registering models in `admin.py`
+- Viewing and managing models in admin panel
+
+configure models.py
+check your db.sqlite file
+run the server /admin
+register app in admin.py
+
+add student through admin panel
+
+**Customize Admin List**
+
+- Customize Admin List Display
+- Admin Search & Filters
+- Admin Ordering
+
+create students app
+configure models.py
+register in admin.py
+
+run the server -->
+create students in admin panel
+

@@ -42,9 +42,9 @@
         <td>{{blog.title}}</td>
         <td>{{blog.is_featured}}</td>
         
+        <!-- <tr>{{forloop.counter}}</tr> -->
         </tr>
         {% endfor %}
-        <tr>{{forloop.counter}}</tr>
     </table> 
     {% comment %}
         FirstOf
@@ -55,7 +55,7 @@
         Verbatim {{Converts into string like avoids the parsing }}
      {% endcomment %}
      {% verbatim %}
-     {{html_code}}
+     {{html_code}} <!--It stops the parsing of the HTML code-->
      {% endverbatim %}
      {% comment %}
         Autoescape

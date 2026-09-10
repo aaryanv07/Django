@@ -1,0 +1,73 @@
+**Authentication and Permissions**
+
+- User Create on Admin Panel
+- Group Create on Admin Panel
+- Provide Permission based on User and Groups
+- Password change and Reset.
+
+
+run the command --> python manage.py makemigrations 
+run the command --> python manage.py migrate
+run the command --> python manage.py createsuperuser -- username -- admin -- email -  admin@admin.com -- 
+Password -- admin
+
+run the server
+
+check users in the admin and give name and last name
+superuser has al the Permissions and he is also allowed to use the admin Panel
+
+Changing the username and password is possible thorough the admin panel 
+
+create a new user by clicking on the plus button ahead of the users and set username -- name --password -- admin@123
+You can set the First Name and Last Name
+
+Active is on / Staff Status is off and Superuser is 
+Try to log in (Staff Status not checked)
+
+log in through admin
+
+check the Staff Status
+
+log in again --> No Permissions are assigned 
+
+login in through admin
+
+click users and give the Permissions of create,read, update and delete
+
+
+check by logging in again with the new user
+
+Creating Groups log in through admin panel
+Click the plus icon of groups and create 'Team Lead' and give Permission to view and change the user (save)
+
+change the new user password to admin@123
+and in the Permissions assign the group Permissions
+
+
+**User Authentication**
+
+- Built-in Django auth system --> installed apps --> "django.contrib.auth" (ready made login in logout)
+- User registration form
+- Login, logout
+- Hashing passwords (secure) --> in db.sqlite file (auth_user) --> pdkdf2 format and has salt method 
+- Restricting pages for logged-in users
+- `@login_required` decorator --> hides the page without the user
+
+steps -->
+create an app accounts --> configure it (midleware should have auth middleware)
+
+setup --> urls.py , forms.py
+
+create templates folder --> accounts folder --> base.html , register.html , login.html , dashboard.html
+
+commands --> python manage.py makemigrations accounts --> python manage.py migrate
+
+create superuser
+
+python manage.py createsuperuser -- username -- admin -- email -  admin@admin.com -- 
+
+if already exists
+
+python manage.py runserver
+
+Register in the page

@@ -13,8 +13,17 @@ python3 manage.py makemigrations portfolio
 python3 manage.py migrate
 
 open shell
-python3 manage.py shell
+python manage.py shell
 from portfolio.models import Student
 Student.objects.create(name="Rohit",age=20,city="Delhi")
+student_list = [
+Student(name="Aman", age=21, city="Mumbai"),
+Student(name="Priya", age=22, city="Bangalore"),
+Student(name="Rahul", age=19, city="Pune")
+ ]
+Student.objects.bulk_create(student_list)
 
 set views.py
+set student_list.html
+
+--run the project--

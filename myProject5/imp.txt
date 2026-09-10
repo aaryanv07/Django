@@ -5,7 +5,7 @@ Rendering templates using views.py.
 dictionary, list, object attributes access
 nested variables {{user.profile.name}}
 default values:  default, default_if_none
-save vs autoescape (safe,escape)
+safe vs autoescape (safe,escape)
 
 Template setup (project + app structure)
 Rendering templates using views.py

@@ -14,7 +14,7 @@ class Student(models.Model): # name of the class is the name of the table
         return self.name
 
 # Migrate the above 
-# 1. python3 manage.py makemigrations (generates sql)
+# 1. python3 manage.py makemigrations blog (generates sql)
 
 # Creates a file in migrations folder
 # 2. python3 manage.py migrate  (apply sql) --> will be visible in .sqlite3 file
@@ -32,11 +32,12 @@ class Student(models.Model): # name of the class is the name of the table
 # print (s1)--> will return all the query set
 
 # for loop in shell for s in s1:
-#   print(s.name,s.age,s.city)
+#   for s in s1:
+# ...     print(s.name,s.age,s.email,s.city)
 
 
 # Using of get() only on unique items 
-# s1=Student.objects.get(city="Punjab")
+# s1=Student.objects.get(city="Punjab") --> only works for the unique entry 
 # s1
 # By default name is getting executed  | anything else can be get through s1.age
 
@@ -51,7 +52,7 @@ class Student(models.Model): # name of the class is the name of the table
 # * Ordering & Chaining
 # from blog.models import Student
 # students = Student.objects.all().order_by('name')
-# students = Student.objects.all().order_by('age') (Ascending order)
+# students = Student.objects.all().order_by('age') (Descending order)
 # students = Student.objects.all().order_by('-age') (Ascending order)
 # students = Student.objects.all().order_by('city','-age') (Ascending order)
 
@@ -66,7 +67,7 @@ class Student(models.Model): # name of the class is the name of the table
 # values() (returning the value in dict format)
 # values("name")
 # s1=Student.objects.values("name","age")
-# s1=Student.objects.values_list("name","age")
+# s1=Student.objects.values_list("name","age") # Returns list of tuples
 # s1=Student.objects.values_list("name",flat=True) ( Easily convert to a standard Python list if needed:)
 
 # first and last and count

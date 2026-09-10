@@ -8,14 +8,14 @@ import pytz
 # Create your views here.
 def blog_details(request):
     ist = pytz.timezone("Asia/Kolkata")
-    ist2 = datetime.now()
+    ist2 = datetime.now(ist)
     blogs=[
         {'title':"django basics",'is_featured':True,'author':'Mohit Kumar'},
         {'title':'django Advanced','is_featured':False,'author':'John Doe'},
         {'title':'django REST Framework','is_featured':True,'author':'Jane'}]
 
     context={'blogs':blogs,
-    'today':datetime.now(ist),
+    'today':datetime.now(),
     'today(normal)':ist2,
     'html_code':'<h1>Welcome to my Blog</h1>',
                }
