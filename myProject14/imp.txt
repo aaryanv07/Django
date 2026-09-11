@@ -1,0 +1,9 @@
+-- Search and Filter
+
+- Search using Q objects (for handling complex queries)
+- Filter querysets dynamically
+
+run the server
+
+and search through the link
+http://127.0.0.1:8000/?q=Python&category=Tutorial

@@ -1,0 +1,39 @@
+**Class-Based Views (CBVs)**
+
+- Difference between FBV & CBV
+- `ListView`, `DetailView`, `CreateView`, `UpdateView`, `DeleteView`
+
+
+**FBV vs CBV**
+
+### Function-Based Views (FBV)
+
+- Normal Python functions hote hain jo request handle karte hain.
+- Har ek HTTP method ke liye manually condition likhna padta hai (`if request.method == "POST"`, etc.).
+- Zyada flexible, beginners ke liye simple.
+
+```python
+from django.shortcuts import render
+from .models import Post
+
+def post_list(request):
+    posts = Post.objects.all()
+    return render(request, 'blog/post_list.html', {'posts': posts})
+```
+
+### Class-Based Views (CBV)
+
+- Python classes hote hain jo inherit karte hain Django ke built-in view classes se.
+- Code reusability, less boilerplate code.
+- HTTP methods (`get`, `post`) directly class ke andar define kiye jaate hain.
+
+```python
+from django.views import View
+from django.shortcuts import render
+from .models import Post
+
+class PostListView(View):
+    def get(self, request):
+        posts = Post.objects.all()
+        return render(request, 'blog/post_list.html', {'posts': posts})
+```

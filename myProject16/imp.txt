@@ -1,0 +1,25 @@
+**Django Middleware**
+
+- What is middleware
+- Built-in middleware
+- How to create custom middleware
+- Full code example
+
+**Common Middleware Uses**
+
+- 🔒 Authentication check
+- 🧾 Request/Response logging
+- 🚫 IP blocking
+- 🌐 Language or session management
+- ⏱️ Performance timing
+
+Step -->
+create file middleware.py in the blog
+
+register the middleware in settings.py
+
+configure --> urls.py and views.py 
+
+run the server
+
+check the terminal logs

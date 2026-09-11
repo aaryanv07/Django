@@ -30,13 +30,14 @@
     <hr>
     <ul>
         {%for post in page_obj%}
-            <li><b>{{post.title}}</b>- {{post.content}}</li>
+            <li><b>{{post.title}}</b>- {{post.content}} <b>category: </b>{{post.Category}}</li>
         {%endfor%}
     </ul>
     <div class="pagination">
         {%if page_obj.has_previous%}
             <a href="?page=1">First</a>
             <a href="?page={{page_obj.previous_page_number}}">Previous</a>
+
         {%endif%}
 
         {%for page_num in page_obj.paginator.page_range%}

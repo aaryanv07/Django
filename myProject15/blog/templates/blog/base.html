@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body class="m-4">
+    <nav class="navbar navbar-expand-lg navbar-lg navbar-light bg-light mb-4">
+        <a href="{% url 'post_list' %}" class="navbar-brand">All Blog Posts</a>
+        <a href="{% url 'post_create' %}" class="btn btn-primary">New Post</a>
+    </nav>
+    <div class="">
+    {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

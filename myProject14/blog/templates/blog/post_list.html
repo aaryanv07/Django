@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django Search and Filter</title>
+  </head>
+  <body>
+    <h1>Django Search and Filter</h1>
+
+    <form action="" method="get" class="search-form">
+      <input type="text" name="q" placeholder="Search" value="{{query}}" />
+      <select name="category" id="category">
+        <option value="">All Categories</option>
+        {% comment %}
+          <option value="Tech" {% if Category == 'Tech' %}selected{% endif %}>Tech</option>
+        {% endcomment %}
+        <option value="News" {% if Category == 'News' %}selected{% endif %}>News</option>
+        <option value="Tutorial" {% if Category == 'Tutorial' %}selected{% endif %}>
+          Tutorial
+        </option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+
+    {% for post in posts %}
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.content }}</p>
+      <p><b>{{ post.category }}</b></p>
+      <hr />
+    {% endfor %}
+  </body>
+</html>

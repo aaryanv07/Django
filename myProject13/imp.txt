@@ -14,7 +14,3 @@ setup - post_list.html
 
 run the server
 
--- Search and Filter
-
-- Search using Q objects (for handling complex queries)
-- Filter querysets dynamically

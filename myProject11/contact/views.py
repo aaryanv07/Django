@@ -7,10 +7,10 @@ from .models import Contact
 def contact_form(request):
     return render(request,'contact.html')
 def submit_contact(request):
-    if request.method == "GET":
-        name=request.GET.get('name')
-        # email=request.GET.get('email')
-        message=request.GET.get('message')
+    if request.method == "POST":
+        name=request.POST.get('name')
+        # email=request.POST.get('email')
+        message=request.POST.get('message')
         # Contact.objects.create(name=name,email=email,message=message)
         if name and message:
             Contact.objects.create(name=name,message=message)
