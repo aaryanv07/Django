@@ -1,0 +1,63 @@
+**DRF Authentication & Permissions**
+
+**Authentication** (Who is this user?)
+- Basic Authentication (username and password)
+- Session Authentication (secure session)
+- Token Authentication (Unique Token)
+- JWT Authentication (JSON Web Token, best method use it in large applications)
+
+**Permissions** (What is the user allowed to do?)
+- `AllowAny` (All are allowed to access the API)
+- `IsAuthenticated` (Only logged in users can access the API)
+- `IsAdminUser` (Only admin users can access the API)
+- `IsAuthenticatedOrReadOnly` (logged in users can access all API but read-only for others)
+
+**Basic Authentication + AllowAny & IsAuthenticated**
+
+- Django REST Framework setup
+- `REST_FRAMEWORK` setting
+- Add URL Routing
+- Create Views
+- Testing in browser
+
+
+Steps -->
+Create an app API
+and register REST_FRAMEWORK in settings.py
+
+Settings of Rest Framework --> in settings.py
+
+**Session Authentication + IsAuthenticatedOrReadOnly**
+
+- What is Session Authentication in Django REST Framework
+- How it works behind login sessions (cookies)
+What is a Cookie?
+Client-side storage: Data lives right inside your web browser on your device.
+Small capacity: Each cookie can hold up to 4KB of data (good for lightweight info).
+Lifespan: Can be short-term or set to persist for months/years until an expiration date.
+Common uses: Remembering dark/light mode preferences, language choice, or tracking site analytics.
+
+- `IsAuthenticatedOrReadOnly` permission
+- Full code implementation + Thunder Client testing
+
+change REST Framework settings
+configure models.py
+
+python manage.py makemigrations && python manage.py migrate
+
+create serializers.py for serialization 
+
+**Token Authentication + IsAdminUser**
+
+- What is Token Authentication in DRF (need to be sent in header 'Authorization: Token <token>')
+- How to generate and use tokens for users
+- What is `IsAdminUser` permission
+- Full implementation + testing using Postman
+
+Steps --> 
+configure settings.py
+
+python manage.py migrate
+create signals.py
+
+register in apps.py

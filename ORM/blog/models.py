@@ -31,7 +31,8 @@ class Student(models.Model): # name of the class is the name of the table
 # s1
 # print (s1)--> will return all the query set
 
-# for loop in shell for s in s1:
+# for loop in :
+
 #   for s in s1:
 # ...     print(s.name,s.age,s.email,s.city)
 

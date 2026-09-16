@@ -1,0 +1,78 @@
+**DRF CRUD using APIView**
+
+best for creating complex API view
+
+- Difference between Function-Based View (`@api_view`) and APIView
+Function based view best for small applications but not for large applications 
+Function based viewe calls itself but class based dosent calls itself
+APIView gets build in methods like get(),post(),put(),delete() and you can also use partial update
+You can inherit APIView or GenericAPIView and reuse logic
+
+- Create simple CRUD (`GET`, `POST`, `PUT`, `DELETE`) API
+- Test in Browser & Postman
+
+**Comparison**
+
+| Feature | Function-Based View (`@api_view`) | Class-Based View (`APIView`) |
+|---|---|---|
+| Style | Functions likhte ho | Classes likhte ho |
+| Reusability | Code repeat hota hai | DRY (Don't Repeat Yourself) |
+| Flexibility | Chhoti API ke liye perfect | Large project ke liye better |
+| Extensibility | Custom logic manually likhna padta hai | Built-in methods jaise `get()`, `post()`, `put()`, `delete()` available |
+| Inheritance | Not possible | You can inherit `APIView` or `GenericAPIView` and reuse logic |
+| Readability | Simple but messy when CRUD grows | Clean and structured code |
+
+Steps --> create api app
+
+Register app and rest_framework
+
+configure models.py and create serializer.py
+
+after setting urls.py and models.py
+
+python manage.py makemigrations &&  python manage.py migrate
+
+run the server
+{"name":"Mohit","age":30,"city":"Delhi"}  --> post method dosent need any id
+
+use the PUT api 
+remove the id pass it from the URL for updating the data
+{
+    "name": "Rohit",
+    "age": 25,
+    "city": "Pune"
+}
+
+use the Delete api 
+pass the id and delete
+
+**DRF CRUD using GenericAPIView + Mixins**
+
+- Why GenericAPIView + Mixins
+- Explain Mixins (`ListModelMixin`, etc.)
+- Step-by-step code walkthrough
+- Testing in browser & Postman
+
+
+comment the content in views.py as well s urls.py and add the new one 
+and run the server
+http://127.0.0.1:8000/student/
+
+add the students data
+
+chsnge the data by passing the id for put request
+http://127.0.0.1:8000/student/4/
+
+delete the data by passing the id for delete request
+http://127.0.0.1:8000/student/4/
+
+
+**DRF CRUD using ModelViewSet + Routers**
+(Very easy for begineers also this is the best method to use in large applications)
+
+- What is ModelViewSet and Router
+- Difference Between GenericAPIView + Mixins vs ModelViewSet
+- Step-by-step code walkthrough
+- Testing in browser & Postman
+
+

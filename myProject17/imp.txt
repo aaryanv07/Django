@@ -1,0 +1,92 @@
+**Introduction to Django REST Framework**
+
+- What is REST API (Representational State Transfer Application Programming Interface)
+(A way to communicate between two applications or systems i.e client and server with 
+HTTP methods GET,POST,PUT,DELETE,PATCH)
+
+**DRF Key Features:**
+
+- JSON, XML, or YAML data
+- Decoupled backends, mobile APIs, Microservices
+- Models, Serializers, and ViewSets
+- Browsable Web API (for live endpoint testing)
+- Installation and setup step-by-step
+- Create first simple API (`GET` request)
+- Run and test API in browser or Postman (Thunder Client)
+
+- What is Django REST Framework (A framework that makes it easier to build Web APIs)
+- Why use DRF (Because it provides the serializer,authentication,authorization,request/response 
+viewsets,routers etc.)
+
+
+
+steps --> crate app name api
+Install Django Rest Framework --> 
+pip install djangorestframework
+
+
+Install the applications:
+ 'api',
+    'rest_framework'
+
+Set up models.py (Define the data model for your API)
+Set up admin.py
+create superuser --> python manage.py createsuperuser -- admin -- admin@gmail.com --admin
+
+Run the server /admin and add three students
+
+create serializers.py file in the app (use to create models into JSON data and vise versa)
+Set up views.py file in the app
+
+run the server --> http://localhost:8000/api/student/
+
+install liteclient application to test the API
+new request --> change the method to POST and in the body tab add the data in raw data
+and give the url http://localhost:8000/api/student/ in the liteclient application
+
+
+**Read API in Django REST Framework**
+
+- GET API
+- Show all students
+- Test JSON format API on browser and Postman
+
+**Create API in Django REST Framework**
+
+- POST API
+- Add new record
+- Test API on browser and Postman
+
+http://127.0.0.1:8000/api/student/add/
+
+{"name":"Anu","age":31,"city":"Pune","email":"anu@gmail.com"}
+
+after creating this student go back to the student endpoint 
+(http://localhost:8000/api/student/)
+You will find 4 students data now
+
+if the input data is invalid, it will be handled by return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST) 
+
+
+**Update API in Django REST Framework**
+
+- PUT API (Updated all the data at once) i.e full Update
+- PATCH API (partial update i.e only updating specific fields)
+- Modify all data and update specific data based on ID
+- Test API on browser and Postman
+
+add the function in views.py and run the server
+http://127.0.0.1:8000/api/student/update/5/
+
+for using the partial data updata only give one field
+
+
+**DELETE API in Django REST Framework**
+
+- DELETE API
+- Remove by ID
+- Test API on browser and Postman
+
+http://127.0.0.1:8000/api/student/delete/5/
+
+

@@ -48,7 +48,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware", # Manages the authentication.
     "django.contrib.messages.middleware.MessageMiddleware", # Manages the messages i.e flashmessages.
     "django.middleware.clickjacking.XFrameOptionsMiddleware", # Manages the clickjacking.
-    'blog.middleware.SimpleLogMiddleware'
+    'blog.middleware.SimpleLogMiddleware',
+    'blog.middleware.BlockIPMiddleware',
+
 ]
 
 ROOT_URLCONF = "myProject16.urls"
